@@ -21,7 +21,7 @@ This is a test team project website! The purpose for this site is to practice no
 
 # Getting Started
 
-- Clone the GitHub repo to your machine.
+- Clone the GitHub repo to your machine `git clone https://github.com/schmitty890/project1.git`
 - Run the index.html file on your live server for development.
 - 🎉Happy developing!🎉
 
@@ -38,6 +38,21 @@ Once you've cloned the project, start your live server off your index.html file.
 - Then develop is updated with the latest version of master, and the process happens all over again.
 
 ![screenshot](https://raw.githubusercontent.com/schmitty890/homestead/master/public/assets/images/branching.jpg)
+
+### Git steps
+
+1. Checkout the `develop` branch locally on your machine, `git checkout develop`
+2. `git pull` on the develop to make sure your develop branch is up to date with the latest code
+3. `git checkout -b yournewbranch` create a new branch off of develop, and name the branch related to the story you are working on. In this example, the branch name is `yournewbranch`
+4. Now that you are on your new branch, make your code edits
+5. Once you are happy with your code edits, see the status of your files with `git status`
+6. `git add .` will add all of the changed files to your commit message. If you only want a single file or specific files added, `git add thefilename` will add the specific file instead of all of them
+7. `git commit -m "your commit message with what your change is"` add a commit message to go along with your commit
+8. `git push` to push your commit up to the repository. Navigate to the [branches tab](https://github.com/schmitty890/project1/branches) to see your branch in the repository
+
+### Pull requests
+
+Each branch needs to have a pull request (PR) where others review the code changes. Click on `New pull request` on your branch you just pushed up and point your branch to be merged into `develop`. NOTE: do NOT point your pull request to merge straight to master. See the screenshot above for a visual on the branching strategy we will follow for this repository.
 
 ### Find a bug or want to add an issue? 🕵️
 
