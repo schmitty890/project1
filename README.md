@@ -2,9 +2,9 @@
 
 ## Environments
 
-- [The Project 1 site prod](https://golden-liger-8f32da.netlify.app/) for demo.
+- [The Project 1 site prod](https://project1-prod.netlify.app/) for demo.
   This is the production site
-- [The Project 1 site develop](https://courageous-otter-b1cb69.netlify.app/) for demo.
+- [The Project 1 site develop](https://project1-dev.netlify.app/) for demo.
   This is the development site, where testing happens to ensure everything is good before moving to production
 
 ## Purpose
@@ -15,7 +15,7 @@ This is a test team project website! The purpose for this site is to practice no
 
 <b>Built with</b>
 
-- [Bootstrap](https://getbootstrap.com/docs/3.3/)
+- [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
 - HTML5, CSS, Javascript, and jQuery
 
