@@ -3,31 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/main.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
-  <title>Document</title>
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/clock.css" rel="stylesheet">
+  <title>Super Awesome Project</title>
 </head>
 <body>
-    <!-- Responsive navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container px-5">
-          <a class="navbar-brand" href="#!">ProjectOne</a>
-          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="navbar-collapse collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="/index.html">Home</a></li>
-              </ul>
-          </div>
-      </div>
+  <!-- Responsive navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+        <a class="navbar-brand" href="#!">ProjectOne</a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="/index.html">Home</a></li>
+            </ul>
+        </div>
+    </div>
   </nav>
-<div>test</div>
-    <!-- Footer-->
-    <footer class="py-5 bg-dark">
+  <!-- CLOCK COMPONENT: START -->
+  <section class="clock-display">
+    <h1>Clock.js</h1>
+    <div class="date-field">
+      <div class="day-of-week">
+        <p class="day-alpha"></p>
+        <p class="placeholder">mmmmmmmmm</p>
+        <p class="placeholder">ooooooooo</p>
+        <p class="placeholder">nnnnnnnnn</p>
+        <p class="placeholder">ttttttttt</p>
+        <p class="placeholder">uuuuuuuuu</p>
+        <p class="placeholder">eeeeeeeee</p>
+        <p class="placeholder">sssssssss</p>
+        <p class="placeholder">wwwwwwwww</p>
+        <p class="placeholder">hhhhhhhhh</p>
+        <p class="placeholder">rrrrrrrrr</p>
+        <p class="placeholder">fffffffff</p>
+        <p class="placeholder">iiiiiiiii</p>
+        <p class="placeholder">ddddddddd</p>
+        <p class="placeholder">aaaaaaaaa</p>
+        <p class="placeholder">yyyyyyyyy</p>
+      </div>
+      <div class="day-of-week-mobile">
+        <p class="day-alpha-mobile"></p>
+        <p class="placeholder">mmm</p>
+        <p class="placeholder">ooo</p>
+        <p class="placeholder">nnn</p>
+        <p class="placeholder">ttt</p>
+        <p class="placeholder">uuu</p>
+        <p class="placeholder">eee</p>
+        <p class="placeholder">sss</p>
+        <p class="placeholder">www</p>
+        <p class="placeholder">hhh</p>
+        <p class="placeholder">rrr</p>
+        <p class="placeholder">fff</p>
+        <p class="placeholder">iii</p>
+      </div>
+      <div class="month">
+        <p class="month-alpha"></p>
+        <p class="placeholder">mmm</p>
+        <p class="placeholder">ooo</p>
+        <p class="placeholder">nnn</p>
+        <p class="placeholder">ttt</p>
+        <p class="placeholder">uuu</p>
+        <p class="placeholder">eee</p>
+        <p class="placeholder">sss</p>
+        <p class="placeholder">www</p>
+        <p class="placeholder">hhh</p>
+        <p class="placeholder">rrr</p>
+        <p class="placeholder">fff</p>
+        <p class="placeholder">iii</p>
+        <p class="placeholder">ddd</p>
+        <p class="placeholder">aaa</p>
+        <p class="placeholder">yyy</p>
+        <p class="type">month</p>
+      </div>
+      <div class="date">
+        <p class="date-number"></p>
+        <p class="placeholder">88</p>
+        <p class="type">day</p>
+      </div>
+      <div class="year">
+        <p class="year-number"></p>
+        <p class="placeholder">888</p>
+        <p class="type">year</p>
+      </div>
+    </div>
+    <div class="clock-field">
+      <div class="numbers">
+        <p class="hours"></p>
+        <p class="placeholder">88</p>
+        <p class="type">hour</p>
+      </div>
+      <div class="colon">
+        <p>:</p>
+      </div>
+      <div class="numbers">
+        <p class="minutes"></p>
+        <p class="placeholder">88</p>
+        <p class="type">minute</p>
+      </div>
+      <div class="colon">
+        <p>:</p>
+      </div>
+      <div class="numbers">
+        <p class="seconds"></p>
+        <p class="placeholder">88</p>
+        <p class="type">second</p>
+      </div>
+      <div class="am-pm">
+        <div>
+          <p class="am">am</p>
+        </div>
+        <div>
+          <p class="pm">pm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CLOCK COMPONENT: END -->
+  <!-- Footer-->
+  <footer class="py-5 bg-dark">
       <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright © ProjectOne - 2023</p></div>
   </footer>
-  
+  <!-- JavaScripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/clock.js"></script>
 </body>
 </html>
