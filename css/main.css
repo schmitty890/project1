@@ -1,0 +1,72 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 40px; /* Gap between grid items */
+  max-width: 1000px; /* fixed width of grid container */
+  margin: 50px auto; /* Center the grid */
+  justify-items: center;
+  /* align-items: center; */
+}
+
+.grid-item {
+  background-color: #FFF4D5; 
+  color: #2C3A47;
+  border-right: 5px solid #E17055; /* */
+  border-bottom: 5px solid #E17055; /* */
+  width: 200px; /* Fixed width of grid item */
+  height: 200px; /* Fixed height of grid item */
+  
+}
+.flex-container {
+  display: flex; /* grid item now becomes flex container */
+  flex-direction: column; /*  Stacks new content vertically */
+  
+
+}
+.flex-item { 
+  flex: 1; /* Each flex items to fill width of flex container  */
+  display: flex; /* Gives flex properties to all flex items*/
+  margin: 0 10px; /* Gives each flex item a margin, scoots text off the edge*/
+}
+.flex-item1 {
+  justify-content: flex-end; /* Alligns to right end*/
+  font-weight: 700;
+  font-size: larger;
+  color: #E17055;
+  
+}
+.flex-item2 {
+  align-items: end; /* Alligns to bottom end*/
+  justify-content: left;
+  font: bold 36px 'Arial', sans-serif ;
+  border-bottom: 2px solid lightgray; /* Adds border under text */
+}
+.flex-item3 {
+  margin-top: 5px;
+  font-size: small; /* More styling and positioning withing flex items */
+  font-weight: 600;
+}
+.flex-item4 {
+  font-weight: 700;
+  font-size: larger;
+  color: #E17055;
+  text-transform: uppercase; 
+  align-items: end;
+}
+
+/* Breakpoints */
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr); /* Breaks to 1 column with 8 rows */
+    grid-template-rows: repeat(8, 1fr); /* when screen size < 768px */
+  }
+}
+  @media (max-width: 768px) {
+    .grid-item {
+      width: 400px; /* Increase grid item width */
+    }
+  }
+
+
