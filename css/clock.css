@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "digital7";
+  src: url('/fonts/digital-7/digital-7.ttf');
+}
+.wrapper {
+  font-family: "digital7";
+  padding: 100px 0;
+}
+.dayOfWeek {
+  font-size: 50px;
+}
+.dateSub {
+  justify-content: center;
+}
+.dateContainer {
+  display: flex;
+  justify-content: center;
+}
+.dateSub {
+  font-size: 15px;
+  word-spacing: 8px;
+}
+.time {
+  font-size: 100px;
+  font-weight: 600;
+}
+.timeSub {
+  word-spacing: 40px;
+}
