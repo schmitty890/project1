@@ -23,7 +23,7 @@ let totallyTrivialTrivia = {
     {
       question: "Mr. Feeny was the teacher in which popular TV show?",
       answer: "Boy Meets World",
-      image: "assets/images/mrfeeny.jpg",
+      image: "images/mrfeeny.jpg",
       answers: [
         "Fresh Prince of Bel-Air",
         "Saved By The Bell",
@@ -34,7 +34,7 @@ let totallyTrivialTrivia = {
     {
       question: "Britney Spears' first song was . . . ",
       answer: "Baby One More Time",
-      image: "assets/images/britneyspears.jpg",
+      image: "images/britneyspears.jpg",
       answers: [
         "You Drive Me Crazy",
         "Toxic",
@@ -45,37 +45,37 @@ let totallyTrivialTrivia = {
     {
       question: "What was Tommy's last name in 'Rugrats?'",
       answer: "Pickles",
-      image: "assets/images/tommypickles.jpg",
+      image: "images/tommypickles.jpg",
       answers: ["DeVille", "Finster", "Pickles"],
     },
     {
       question: "Who wrote the book series 'Goosebumps?'",
       answer: "R.L. Stein",
-      image: "assets/images/rlstein.jpg",
+      image: "images/rlstein.jpg",
       answers: ["Dav Pilkey", "R.L. Stein", "Lois Lowry"],
     },
     {
       question: "The original flavour of the Dunkaroos cookies was . . .",
       answer: "Cinnamon",
-      image: "assets/images/dunkaroos.jpg",
+      image: "images/dunkaroos.jpg",
       answers: ["Chocolate", "Vanilla", "Cinnamon"],
     },
     {
       question: "What flavour soda was Surge?",
       answer: "Citrus",
-      image: "assets/images/surge.png",
+      image: "images/surge.png",
       answers: ["Grapefruit", "Orange", "Citrus"],
     },
     {
       question: "'Tamagotchi' is a Japanese portmanteau of what two words?",
       answer: "Egg + Watch",
-      image: "assets/images/Tamagotchi.jpeg",
+      image: "images/Tamagotchi.jpeg",
       answers: ["Egg + Watch", "Egg + Computer", "Egg + Pet", "Egg + Friend"],
     },
     {
       question: "Amanda Bynes got her start on the Nickelodeon show . . .",
       answer: "All That",
-      image: "assets/images/amandabynes.jpg",
+      image: "images/amandabynes.jpg",
       answers: [
         "All That",
         "The Wild Thornberrys",
@@ -87,7 +87,7 @@ let totallyTrivialTrivia = {
       question:
         "'You are my fire, the one desire' are the first words of which Backstreet Boys' song?",
       answer: "I Want It That Way",
-      image: "assets/images/backstreet.jpg",
+      image: "images/backstreet.jpg",
       answers: [
         "Drowning",
         "Quit Playing Games",
@@ -98,19 +98,19 @@ let totallyTrivialTrivia = {
     {
       question: "Rocko from 'Rocko's Modern Life' was what kind of animal?",
       answer: "Wallaby",
-      image: "assets/images/racko.png",
+      image: "images/racko.png",
       answers: ["Wallaby", "Dog", "Armadillo", "Kangaroo"],
     },
     {
       question: "Which company made Oreo O's?",
       answer: "Post",
-      image: "assets/images/oreo.jpeg",
+      image: "images/oreo.jpeg",
       answers: ["Post", "General Mills", "Kellog's"],
     },
     {
       question: "Jagged Little Pill is the album by which singer?",
       answer: "Alanis Morissette",
-      image: "assets/images/alanis.jpg",
+      image: "images/alanis.jpg",
       answers: [
         "Mariah Carey",
         "Christina Aguilera",
@@ -121,25 +121,25 @@ let totallyTrivialTrivia = {
     {
       question: "In Spice Girls, Mel B was known as . . .",
       answer: "Scary Spice",
-      image: "assets/images/Scary-Spice.jpg",
+      image: "images/Scary-Spice.jpg",
       answers: ["Sporty Spice", "Posh Spice", "Scary Spice"],
     },
     {
       question: "Which of the following was NOT a player in Super Mario Cart?",
       answer: "Crash",
-      image: "assets/images/Crash.png",
+      image: "images/Crash.png",
       answers: ["Crash", "Toad", "Luigi", "Princess Peach"],
     },
     {
       question: "'White Mystery' was a flavor of which candy?",
       answer: "Airheads",
-      image: "assets/images/airheads.jpg",
+      image: "images/airheads.jpg",
       answers: ["Airheads", "Laffy Taffy", "Warheads", "Dums Dums"],
     },
     {
       question: "Full House took place in which city?",
       answer: "San Francisco",
-      image: "assets/images/fullhouse.jpeg",
+      image: "images/fullhouse.jpeg",
       answers: ["Chicago", "San Francisco", "Los Angeles", "New York City"],
     },
   ],
