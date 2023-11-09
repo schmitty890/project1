@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <title>Charlotte Hornets Scoreboard</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -38,21 +39,16 @@
                  HOU 
               </div>
               <div class="team-score">
-                 51
+                 0
               </div>
            </div>
            <div class="team-thisgame">
-              <div class="team-times">
-                 TO: 6
-              </div>
-              <div class="team-bonus">
-                 BONUS
-              </div>
+              
            </div>
         </div>
      </div>
-     <div class="team team-b charlotte">
-        <div class="team-logo">
+     <div class="team team-b charlotte home-team">
+        <div class="home-team-logo">
            <img src="images/hugo.jpeg" width="50px" height="50px"/>
         </div>
         <div class="team-detail">
@@ -60,17 +56,12 @@
               <div class="home-team-name">
                  CHA
               </div>
-              <div class="team-score">
-                 100
+              <div class="home-team-score">
+                 0
               </div>
            </div>
            <div class="team-thisgame">
-              <div class="team-times">
-                 TO: 4
-              </div>
-              <div class="team-bonus">
-                 BONUS
-              </div>
+              
            </div>
         </div>
      </div>
@@ -80,11 +71,9 @@
                 3rd
             </div>
             <div class="timeleft">
-                11:45
+                00:00
             </div>
-            <div class="shotclock">
-                24
-            </div>
+            
         </div> 
      </div>
      <div class="logo d-flex">
@@ -97,16 +86,44 @@
 <!-- End of flex wrapper -->
   </div>
   
-  <!-- API TEST -->
-  <div class="leaders-flex-container d-flex justify-content-center flex-row">
-  <!-- Points Leader -->
-  <div class="">Points leader:  </div> 
-  <div class="pts-leader ps-1 pe-1"></div>
-  <!-- Assist Leader -->
-  <div class="">Assist leader:  </div> 
-  <div class="assist-leader ps-1 pe-1"></div>
-
+  <div class="table-flex-wrapper d-flex p-5">
+    <table class="stats-table table table-sm text-center table-hover table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Points</th>
+        <th scope="col">Assists</th>
+        <th scope="col">Rebound</th>
+        <th scope="col">Blocks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td class="pts-leader-1">A</td>
+        <td class="ast-leader-1">A</td>
+        <td class="reb-leader-1">A</td>
+        <td class="blk-leader-1">A</td>
+      
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td class="pts-leader-2">B</td>
+        <td class="ast-leader-2">B</td>
+        <td class="reb-leader-2">B</td>
+        <td class="blk-leader-2">B</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td class="pts-leader-3">C</td>
+        <td class="ast-leader-3">C</td>
+        <td class="reb-leader-3">C</td>
+        <td class="blk-leader-3">C</td>
+      </tr>
+    </tbody>
+  </table>
   </div>
+  
   
 
   <!-- Footer-->
