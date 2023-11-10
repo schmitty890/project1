@@ -3,7 +3,7 @@
 .flex-wrapper {
 display: flex;
 justify-content: center;
-padding: 50px 0;
+padding: 200px 0;
 }
 body {
   font-family: "Montserrat", "Arial";
@@ -107,9 +107,33 @@ body {
 /* Game */ 
 
  .away-team {
-  background-color: rgb(23, 53, 187);
+  background-color: purple;
 } 
 
 .charlotte {
   background-color: rgb(0, 120, 140); 
+}
+
+
+#leaderboard .group-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#leaderboard .leaderboard-group-section {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#leaderboard .leaderboard-group-section .stat {
+  font-size: 24px;
+}
+
+#leaderboard .leaderboard-group-section .name {
+  font-size: 24px;
+}
+
+#leaderboard .leaderboard-group-section .image {
+  width: 100px;
 }
