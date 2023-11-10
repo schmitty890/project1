@@ -75,21 +75,21 @@ fetch(weaklyTypedEvents)
 
 
       // Check if either the awayTeam or homeTeam is the Charlotte Hornets
-      if (awayTeam.abbrev === "MIL" || homeTeam.abbrev === "MIL") // MIL will become CHA
-
+      if (awayTeam.abbrev === "CHA" || homeTeam.abbrev === "CHA") 
       {
-        if (awayTeam.abbrev === "MIL") // If Hornets are away
+        if (awayTeam.abbrev === "CHA") // If Hornets are away
         {
           // Injecting away (hornets) team data
           $(".away-team-name").html(homeTeamAbbrev); // ABR NAME
           $(".away-team-logo").html('<img src="' + homeTeamLogo + '" width="50px" height="50px"/>'); // LOGO
           $(".away-team").css("background-color", "#" + homeTeamColor); // COLOR
-          $(".away-team-score").html(awayTeamScore); // SCORE
+          $(".away-team-score").html(homeTeamScore); // SCORE
           // Injecting home team data 
           $(".home-team-name").html(awayTeamAbbrev); // ABR NAME
           $(".home-team-logo").html('<img src="' + awayTeamLogo + '" width="50px" height="50px"/>'); // LOGO
           $(".home-team").css("background-color", "#" + awayTeamColor); //  COLOR
-          $(".home-team-score").html(homeTeamScore); // SCORE
+          $(".home-team-score").html(awayTeamScore); // SCORE
+          console.log('home team score is: ', awayTeamScore);
 
 
         } else // if hornets are home
@@ -106,8 +106,10 @@ fetch(weaklyTypedEvents)
         }
       }
     });
-
-
+    // IF CHA IS NOT FOUND HOME OR AWAY -- NO GAME
+    $(".home-team-name").html('GAME');
+    $(".away-team-name").html('NO');
+    
 
     console.log("the weakly typed api event data today is", data);
 
@@ -127,7 +129,7 @@ fetch(weaklyTypedEvents)
   })
   .then((data) => {
     // Handle the JSON data in this block
-
+    
     const game1 = data.scores[0];
     console.log('game 1 is: ', game1.teams.awayTeam.displayName, ' @ ', game1.teams.homeTeam.displayName);
   })

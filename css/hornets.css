@@ -3,7 +3,7 @@
 .flex-wrapper {
 display: flex;
 justify-content: center;
-padding: 50px 0;
+padding: 200px 0;
 }
 body {
   font-family: "Montserrat", "Arial";
@@ -107,7 +107,7 @@ body {
 /* Game */ 
 
  .away-team {
-  background-color: rgb(23, 53, 187);
+  background-color: purple;
 } 
 
 .charlotte {
