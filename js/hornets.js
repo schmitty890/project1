@@ -1,5 +1,6 @@
 var weaklyTypedStats = "https://scores.weaklytyped.com/api/v1/sports/nba/stats";
-var weaklyTypedEvents = "https://scores.weaklytyped.com/api/v1/sports/nba/events";
+var weaklyTypedEvents =
+  "https://scores.weaklytyped.com/api/v1/sports/nba/events";
 
 // Fetching Stats
 fetch(weaklyTypedStats)
@@ -11,7 +12,8 @@ fetch(weaklyTypedStats)
   })
   .then((data) => {
     // Handle the JSON data in this block
-    console.log("stats data", data)
+    console.log("stats data", data);
+    buildLeaderBoards(data);
     var ptsLeader1 = data.stats.offense.groups[0].leaders[0].name;
     var ptsLeader2 = data.stats.offense.groups[0].leaders[1].name;
     var ptsLeader3 = data.stats.offense.groups[0].leaders[2].name;
@@ -43,12 +45,11 @@ fetch(weaklyTypedStats)
     $(".blk-leader-1").html(blkLeader1); // adds blk leader to html
     $(".blk-leader-2").html(blkLeader2); // adds blk leader to html
     $(".blk-leader-3").html(blkLeader3); // adds blk leader to html
-
   })
   .catch((error) => {
     console.error("There was a problem with the fetch operation:", error);
   });
-// Fetching events 
+// Fetching events
 
 fetch(weaklyTypedEvents)
   .then((response) => {
@@ -60,8 +61,8 @@ fetch(weaklyTypedEvents)
   .then((data) => {
     // Handle the JSON data in this block
 
-    // FOR EACH STATEMENT ITERATE OVER GAMES 
-    data.scores.forEach(scores => {
+    // FOR EACH STATEMENT ITERATE OVER GAMES
+    data.scores.forEach((scores) => {
       const awayTeam = scores.teams.awayTeam;
       const homeTeam = scores.teams.homeTeam;
       const homeTeamAbbrev = scores.teams.homeTeam.abbrev;
@@ -73,48 +74,47 @@ fetch(weaklyTypedEvents)
       const awayTeamScore = scores.teams.awayTeam.score;
       const homeTeamScore = scores.teams.homeTeam.score;
 
-
       // Check if either the awayTeam or homeTeam is the Charlotte Hornets
-      if (awayTeam.abbrev === "CHA" || homeTeam.abbrev === "CHA") 
-      {
-        if (awayTeam.abbrev === "CHA") // If Hornets are away
-        {
+      if (awayTeam.abbrev === "CHA" || homeTeam.abbrev === "CHA") {
+        if (awayTeam.abbrev === "CHA") {
+          // If Hornets are away
           // Injecting away (hornets) team data
           $(".away-team-name").html(homeTeamAbbrev); // ABR NAME
-          $(".away-team-logo").html('<img src="' + homeTeamLogo + '" width="50px" height="50px"/>'); // LOGO
+          $(".away-team-logo").html(
+            '<img src="' + homeTeamLogo + '" width="50px" height="50px"/>'
+          ); // LOGO
           $(".away-team").css("background-color", "#" + homeTeamColor); // COLOR
           $(".away-team-score").html(homeTeamScore); // SCORE
-          // Injecting home team data 
+          // Injecting home team data
           $(".home-team-name").html(awayTeamAbbrev); // ABR NAME
-          $(".home-team-logo").html('<img src="' + awayTeamLogo + '" width="50px" height="50px"/>'); // LOGO
+          $(".home-team-logo").html(
+            '<img src="' + awayTeamLogo + '" width="50px" height="50px"/>'
+          ); // LOGO
           $(".home-team").css("background-color", "#" + awayTeamColor); //  COLOR
           $(".home-team-score").html(awayTeamScore); // SCORE
-          console.log('home team score is: ', awayTeamScore);
-
-
-        } else // if hornets are home
-        {
+          console.log("home team score is: ", awayTeamScore);
+        } // if hornets are home
+        else {
           // Injecting away team data
           $(".away-team-name").html(awayTeamAbbrev);
-          $(".away-team-logo").html('<img src="' + awayTeamLogo + '" width="50px" height="50px"/>');
+          $(".away-team-logo").html(
+            '<img src="' + awayTeamLogo + '" width="50px" height="50px"/>'
+          );
           $(".away-team").css("background-color", "#" + awayTeamColor);
           // Injecting home (hornets) team data
           $(".home-team-name").html(homeTeamAbbrev);
-          $(".home-team-logo").html('<img src="' + homeTeamLogo + '" width="50px" height="50px"/>');
+          $(".home-team-logo").html(
+            '<img src="' + homeTeamLogo + '" width="50px" height="50px"/>'
+          );
           $(".home-team").css("background-color", "#" + homeTeamColor);
-
         }
       }
     });
     // IF CHA IS NOT FOUND HOME OR AWAY -- NO GAME
-    $(".home-team-name").html('GAME');
-    $(".away-team-name").html('NO');
-    
+    $(".home-team-name").html("GAME");
+    $(".away-team-name").html("NO");
 
     console.log("the weakly typed api event data today is", data);
-
-
-
   })
   .catch((error) => {
     console.error("There was a problem with the fetch operation:", error);
@@ -129,9 +129,14 @@ fetch(weaklyTypedEvents)
   })
   .then((data) => {
     // Handle the JSON data in this block
-    
+
     const game1 = data.scores[0];
-    console.log('game 1 is: ', game1.teams.awayTeam.displayName, ' @ ', game1.teams.homeTeam.displayName);
+    console.log(
+      "game 1 is: ",
+      game1.teams.awayTeam.displayName,
+      " @ ",
+      game1.teams.homeTeam.displayName
+    );
   })
   .catch((error) => {
     console.error("There was a problem with the fetch operation:", error);
@@ -150,10 +155,9 @@ function formatDate() {
   // Generate yyyy-mm-dd date string
   var formattedDate = year + "-" + month + "-" + day;
   return formattedDate;
-
 }
 const formattedDate = formatDate();
-console.log('Todays date: ', formattedDate);
+console.log("Todays date: ", formattedDate);
 
 fetch(
   `https://www.balldontlie.io/api/v1/games?dates[]=${formattedDate}`
@@ -184,16 +188,13 @@ fetch(
     // $(".home-team-name").html(homeTeamName);
     // $(".home-team-score").html(homeTeamScore);
     // $(".home-team-abbrevation").html(homeTeamName);
-    console.log('the balldontlie event data today is: ', data);
-    ;
+    console.log("the balldontlie event data today is: ", data);
   })
   .catch((error) => {
     console.error("There was a problem with the fetch operation:", error);
   });
 // Seperate fetch for more data
-fetch(
-  `https://www.balldontlie.io/api/v1/games?seasons[]=2023&team_ids[]=4`
-)
+fetch(`https://www.balldontlie.io/api/v1/games?seasons[]=2023&team_ids[]=4`)
   .then((response) => {
     if (!response.ok) {
       throw new Error("Network response was not ok");
@@ -208,3 +209,47 @@ fetch(
   .catch((error) => {
     console.error("There was a problem with the fetch operation:", error);
   });
+
+/**
+ * buildLeaderBoards builds the html template for the leaderboards section
+ * @param {*} data - data we get back from the api request
+ */
+function buildLeaderBoards(data) {
+  // console.log("buildLeaderBoards func");
+  const statGroups = data.stats.offense.groups;
+  let html = "";
+
+  statGroups.forEach((group) => {
+    let leaders = "";
+    group.leaders.forEach((leader) => {
+      // console.log(leader);
+      leaders += `
+        <tr>
+          <td class="name">${leader.name}</td>
+          <td><img class="image" src=${leader.headshot.href} /></td>
+          <td class="stat">${leader.statValue}</td>
+        </tr>
+      `;
+    });
+    html += `
+      <section id="${group.abbrev}" class="leaderboard-group-section">
+        <table class="table">
+          <div class="group-name">${group.desc}</div>
+          <thead>
+            <tr>
+              <th scope="col">Player</th>
+              <th scope="col">Photo</th>
+              <th scope="col">Stat</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${leaders}
+          </tbody>
+        </table>
+      </section>
+      <hr />
+    `;
+  });
+  // add new html to the leaderboard section
+  $("#leaderboard").append(html);
+}
