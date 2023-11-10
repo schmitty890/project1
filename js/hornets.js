@@ -216,10 +216,45 @@ fetch(`https://www.balldontlie.io/api/v1/games?seasons[]=2023&team_ids[]=4`)
  */
 function buildLeaderBoards(data) {
   // console.log("buildLeaderBoards func");
-  const statGroups = data.stats.offense.groups;
+  const statGroupsOffense = data.stats.offense.groups;
+  const statGroupsDefense = data.stats.defense.groups;
   let html = "";
 
-  statGroups.forEach((group) => {
+  // we can leave these offense/defense separate for now if we want to separate these into other sections in the future
+  //build offense html
+  statGroupsOffense.forEach((group) => {
+    let leaders = "";
+    group.leaders.forEach((leader) => {
+      // console.log(leader);
+      leaders += `
+        <tr>
+          <td class="name">${leader.name}</td>
+          <td><img class="image" src=${leader.headshot.href} /></td>
+          <td class="stat">${leader.statValue}</td>
+        </tr>
+      `;
+    });
+    html += `
+      <section id="${group.abbrev}" class="leaderboard-group-section">
+        <table class="table">
+          <div class="group-name">${group.desc}</div>
+          <thead>
+            <tr>
+              <th scope="col">Player</th>
+              <th scope="col">Photo</th>
+              <th scope="col">Stat</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${leaders}
+          </tbody>
+        </table>
+      </section>
+      <hr />
+    `;
+  });
+  // build defense html
+  statGroupsDefense.forEach((group) => {
     let leaders = "";
     group.leaders.forEach((leader) => {
       // console.log(leader);
