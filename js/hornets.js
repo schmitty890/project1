@@ -21,9 +21,9 @@ fetch(weaklyTypedStats)
 // call get data for scoreboards on page load
 getDataForScoreBoards();
 // set interval calls for new data every X number of milliseconds
-// setInterval(() => {
-//   getDataForScoreBoards();
-// }, 30000);
+setInterval(() => {
+  getDataForScoreBoards();
+}, 30000);
 // Fetching events
 function getDataForScoreBoards() {
   fetch(weaklyTypedEvents)
