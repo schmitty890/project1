@@ -40,62 +40,62 @@ function getDataForScoreBoards() {
       buildScoreBoards(data);
 
       // FOR EACH STATEMENT ITERATE OVER GAMES
-      // data.scores.forEach((scores) => {
-      //   const awayTeam = scores.teams.awayTeam;
-      //   const homeTeam = scores.teams.homeTeam;
-      //   const homeTeamAbbrev = scores.teams.homeTeam.abbrev;
-      //   const homeTeamLogo = scores.teams.homeTeam.logo;
-      //   const homeTeamColor = scores.teams.homeTeam.teamColor;
-      //   const awayTeamAbbrev = scores.teams.awayTeam.abbrev;
-      //   const awayTeamLogo = scores.teams.awayTeam.logo;
-      //   const awayTeamColor = scores.teams.awayTeam.teamColor;
-      //   const awayTeamScore = scores.teams.awayTeam.score;
-      //   const homeTeamScore = scores.teams.homeTeam.score;
+      data.scores.forEach((scores) => {
+        const awayTeam = scores.teams.awayTeam;
+        const homeTeam = scores.teams.homeTeam;
+        const homeTeamAbbrev = scores.teams.homeTeam.abbrev;
+        const homeTeamLogo = scores.teams.homeTeam.logo;
+        const homeTeamColor = scores.teams.homeTeam.teamColor;
+        const awayTeamAbbrev = scores.teams.awayTeam.abbrev;
+        const awayTeamLogo = scores.teams.awayTeam.logo;
+        const awayTeamColor = scores.teams.awayTeam.teamColor;
+        const awayTeamScore = scores.teams.awayTeam.score;
+        const homeTeamScore = scores.teams.homeTeam.score;
 
-      //   // Check if either the awayTeam or homeTeam is the Charlotte Hornets
-      //   if (awayTeam.abbrev === "CHA" || homeTeam.abbrev === "CHA") {
-      //     if (awayTeam.abbrev === "CHA") {
-      //       // If Hornets are away
-      //       // Injecting away (hornets) team data
-      //       $(".away-team-name").html(homeTeamAbbrev); // ABR NAME
-      //       $(".away-team-logo").html(
-      //         '<img src="' + homeTeamLogo + '" width="50px" height="50px"/>'
-      //       ); // LOGO
-      //       $(".away-team").css("background-color", "#" + homeTeamColor); // COLOR
-      //       $(".away-team-score").html(homeTeamScore); // SCORE
-      //       // Injecting home team data
-      //       $(".home-team-name").html(awayTeamAbbrev); // ABR NAME
-      //       $(".home-team-logo").html(
-      //         '<img src="' + awayTeamLogo + '" width="50px" height="50px"/>'
-      //       ); // LOGO
-      //       $(".home-team").css("background-color", "#" + awayTeamColor); //  COLOR
-      //       $(".home-team-score").html(awayTeamScore); // SCORE
-      //       console.log("home team score is: ", awayTeamScore);
-      //     }
-      //     if (homeTeam.abbrev === "CHA") {
-      //       // if hornets are home
-      //       $(".away-team-name").html(awayTeamAbbrev); // ABREV
-      //       $(".away-team-logo").html(
-      //         '<img src="' + awayTeamLogo + '" width="50px" height="50px"/>'
-      //       ); // LOGO
-      //       $(".away-team").css("background-color", "#" + awayTeamColor); // COLOR
-      //       $(".away-team-score").html(awayTeamScore); // SCORE
-      //       // Injecting home (hornets) team data
-      //       $(".home-team-name").html(homeTeamAbbrev); // ABBREV
-      //       $(".home-team-logo").html(
-      //         '<img src="' + homeTeamLogo + '" width="50px" height="50px"/>'
-      //       ); // LOGO
-      //       $(".home-team").css("background-color", "#" + homeTeamColor); // COLOR
-      //       $(".home-team-score").html(homeTeamScore); // SCORE
-      //     }
-      //   }
-      //   // else
-      //   //   {
-      //   //     // IF CHA IS NOT FOUND HOME OR AWAY -- NO GAME
-      //   //     $(".home-team-name").html("GAME");
-      //   //     $(".away-team-name").html("NO");
-      //   //   }
-      // });
+        // Check if either the awayTeam or homeTeam is the Charlotte Hornets
+        if (awayTeam.abbrev === "CHA" || homeTeam.abbrev === "CHA") {
+          if (awayTeam.abbrev === "CHA") {
+            // If Hornets are away
+            // Injecting away (hornets) team data
+            $(".away-team-name").html(homeTeamAbbrev); // ABR NAME
+            $(".away-team-logo").html(
+              '<img src="' + homeTeamLogo + '" width="50px" height="50px"/>'
+            ); // LOGO
+            $(".away-team").css("background-color", "#" + homeTeamColor); // COLOR
+            $(".away-team-score").html(homeTeamScore); // SCORE
+            // Injecting home team data
+            $(".home-team-name").html(awayTeamAbbrev); // ABR NAME
+            $(".home-team-logo").html(
+              '<img src="' + awayTeamLogo + '" width="50px" height="50px"/>'
+            ); // LOGO
+            $(".home-team").css("background-color", "#" + awayTeamColor); //  COLOR
+            $(".home-team-score").html(awayTeamScore); // SCORE
+            console.log("home team score is: ", awayTeamScore);
+          }
+          if (homeTeam.abbrev === "CHA") {
+            // if hornets are home
+            $(".away-team-name").html(awayTeamAbbrev); // ABREV
+            $(".away-team-logo").html(
+              '<img src="' + awayTeamLogo + '" width="50px" height="50px"/>'
+            ); // LOGO
+            $(".away-team").css("background-color", "#" + awayTeamColor); // COLOR
+            $(".away-team-score").html(awayTeamScore); // SCORE
+            // Injecting home (hornets) team data
+            $(".home-team-name").html(homeTeamAbbrev); // ABBREV
+            $(".home-team-logo").html(
+              '<img src="' + homeTeamLogo + '" width="50px" height="50px"/>'
+            ); // LOGO
+            $(".home-team").css("background-color", "#" + homeTeamColor); // COLOR
+            $(".home-team-score").html(homeTeamScore); // SCORE
+          }
+        }
+        // else
+        //   {
+        //     // IF CHA IS NOT FOUND HOME OR AWAY -- NO GAME
+        //     $(".home-team-name").html("GAME");
+        //     $(".away-team-name").html("NO");
+        //   }
+      });
       console.log("the weakly typed api event data today is", data);
     })
     .catch((error) => {
