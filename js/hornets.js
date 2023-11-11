@@ -21,9 +21,9 @@ fetch(weaklyTypedStats)
 // call get data for scoreboards on page load
 getDataForScoreBoards();
 // set interval calls for new data every X number of milliseconds
-setInterval(() => {
-  getDataForScoreBoards();
-}, 30000);
+// setInterval(() => {
+//   getDataForScoreBoards();
+// }, 30000);
 // Fetching events
 function getDataForScoreBoards() {
   fetch(weaklyTypedEvents)
@@ -295,15 +295,12 @@ function buildScoreBoards(data) {
             </div>
           </div> 
         </div>`;
-    } else if (score.tstatus.state === "final") {
+    } else if (score.status.state === "post") {
       gameStartTime = `
         <div class="timer">
           <div class="timer-container">
             <div class="quarter">
               FINAL
-            </div>
-            <div class="timeleft">
-              View Details
             </div>
           </div> 
         </div>`;
